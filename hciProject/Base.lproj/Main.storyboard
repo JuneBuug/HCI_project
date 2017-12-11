@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--홈-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="hciProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="가장 많이 본 영상 Top Workout Videos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdt-zN-zNr">
+                                <rect key="frame" x="33" y="43" width="620" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="‘상복근’ 추천 루틴 Recommendation for ‘Upper Abs’" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHF-JB-Mhp">
+                                <rect key="frame" x="33" y="455" width="857" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xXO-sR-m3R">
+                                <rect key="frame" x="33" y="120" width="991" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DKh-Dp-BX0">
+                                <rect key="frame" x="33" y="562" width="991" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="중급자용 For Intermediate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijl-y5-aDx">
+                                <rect key="frame" x="33" y="503" width="857" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16074991229999999" green="0.16072323920000001" blue="0.16484043000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="홈" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="routineScrollView" destination="DKh-Dp-BX0" id="aag-mi-XrW"/>
+                        <outlet property="scrollView" destination="xXO-sR-m3R" id="oJN-bP-96f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-320.3125"/>
+        </scene>
+        <!--운동검색-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="hciProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.16074991229999999" green="0.16072323920000001" blue="0.16484043000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="운동검색" image="second" id="cPa-gy-q4n"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="515"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.16074991229999999" green="0.16072323920000001" blue="0.16484043000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="3XX-rF-gCt" kind="relationship" relationship="viewControllers" id="1NE-xs-tWr"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-506" y="-143"/>
+        </scene>
+        <!--설정 Navigation-->
+        <scene sceneID="cu2-Kr-kvf">
+            <objects>
+                <navigationController title="설정 Navigation" id="3XX-rF-gCt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="설정" badgeValue="NEW" id="KPz-7b-qIH"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" backIndicatorImage="ic_back" id="2rf-zi-SKS">
+                        <rect key="frame" x="0.0" y="20" width="1024" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="KEz-VU-BQ1" kind="relationship" relationship="rootViewController" id="Wzy-2f-wuW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="klZ-GR-jjb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationItem title="Title" id="sPf-5H-SHQ"/>
+            </objects>
+            <point key="canvasLocation" x="-616" y="1155"/>
+        </scene>
+        <!--설정-->
+        <scene sceneID="3yy-4A-OtZ">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KEz-VU-BQ1" customClass="SettingsViewController" customModule="hciProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e8C-6v-Yfg">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cP2-yg-rjM">
+                                <rect key="frame" x="392" y="519" width="240" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Dg1-Rj-ez9"/>
+                                    <constraint firstAttribute="width" constant="240" id="vIh-Kt-Mdr"/>
+                                </constraints>
+                                <state key="normal" image="btn_fix"/>
+                                <connections>
+                                    <action selector="onTouchNext:" destination="KEz-VU-BQ1" eventType="touchUpInside" id="p7x-b1-NYc"/>
+                                    <segue destination="JcT-eo-Aha" kind="show" animates="NO" id="26z-SL-Wkn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주 운동 근육" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxP-e6-LNd">
+                                <rect key="frame" x="273" y="226" width="152" height="38.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="숙련도" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3q-bO-CX1">
+                                <rect key="frame" x="289" y="302" width="121" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="운동주기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBn-Ul-51g">
+                                <rect key="frame" x="289" y="390" width="121" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상복근" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bC-De-zpG">
+                                <rect key="frame" x="584" y="226" width="83.5" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="초보자" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8x-Mo-7UM">
+                                <rect key="frame" x="584" y="302" width="252" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="매일 30분" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XIX-Ij-uk2">
+                                <rect key="frame" x="584" y="390" width="240" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16074991229999999" green="0.16072323920000001" blue="0.16484043000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cP2-yg-rjM" firstAttribute="centerX" secondItem="tNg-xq-J3t" secondAttribute="centerX" id="CxE-3z-iXl"/>
+                            <constraint firstItem="1bC-De-zpG" firstAttribute="leading" secondItem="e8C-6v-Yfg" secondAttribute="leading" constant="584" id="DD6-z5-Ib6"/>
+                            <constraint firstItem="yxP-e6-LNd" firstAttribute="leading" secondItem="tNg-xq-J3t" secondAttribute="leading" constant="273" id="KZU-US-hwd"/>
+                            <constraint firstItem="1bC-De-zpG" firstAttribute="centerY" secondItem="yxP-e6-LNd" secondAttribute="centerY" id="VuZ-bH-X1D"/>
+                            <constraint firstItem="tNg-xq-J3t" firstAttribute="bottom" secondItem="cP2-yg-rjM" secondAttribute="bottom" constant="120" id="W4s-wx-BV8"/>
+                            <constraint firstItem="tNg-xq-J3t" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1bC-De-zpG" secondAttribute="trailing" id="fNO-K1-ZLQ"/>
+                            <constraint firstItem="yxP-e6-LNd" firstAttribute="top" secondItem="tNg-xq-J3t" secondAttribute="top" constant="162" id="fSx-SH-25q"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="yxP-e6-LNd" secondAttribute="trailing" constant="20" symbolic="YES" id="ifM-WQ-Whr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tNg-xq-J3t"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="설정" image="second" id="OGy-wE-b0V"/>
+                    <navigationItem key="navigationItem" title="설정" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="TeY-yi-r4Z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ATf-2u-0q8" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="1340"/>
+        </scene>
+        <!--운동 추천-->
+        <scene sceneID="smR-UT-aEq">
+            <objects>
+                <viewController title="운동 추천" id="JcT-eo-Aha" customClass="SettingsViewController" customModule="hciProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bIr-Oh-D9J">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Now I will ask you few things to recommend exercise right for you" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmJ-7X-qch">
+                                <rect key="frame" x="239" y="450" width="547" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="안녕하세요 :)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51L-cZ-1it">
+                                <rect key="frame" x="277" y="151" width="470" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="원하시는 운동을 추천해드리기 위해," textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wf1-BV-hNx">
+                                <rect key="frame" x="262" y="239" width="500" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="몇가지만 여쭤볼게요." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uy-rf-aDm">
+                                <rect key="frame" x="277" y="326" width="470" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05c-go-KjB">
+                                <rect key="frame" x="473" y="564" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="94N-np-pAd"/>
+                                    <constraint firstAttribute="width" constant="80" id="i9y-eq-9du"/>
+                                </constraints>
+                                <state key="normal" image="ic_next"/>
+                                <connections>
+                                    <action selector="onTouchNext:" destination="JcT-eo-Aha" eventType="touchUpInside" id="5GB-kk-9WK"/>
+                                    <segue destination="KM0-P1-fOa" kind="show" id="70r-h1-QKS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16074991229999999" green="0.16072323920000001" blue="0.16484043000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="05c-go-KjB" firstAttribute="centerX" secondItem="kfL-pv-zfX" secondAttribute="centerX" constant="1" id="S0M-tS-2K1"/>
+                            <constraint firstItem="kfL-pv-zfX" firstAttribute="bottom" secondItem="05c-go-KjB" secondAttribute="bottom" constant="75" id="yFU-xz-KCh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kfL-pv-zfX"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J7G-2V-rnU" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1386" y="1340"/>
+        </scene>
+        <!--근육 선택-->
+        <scene sceneID="xfn-ZX-bDQ">
+            <objects>
+                <viewController title="근육 선택" id="KM0-P1-fOa" customClass="SettingsViewController" customModule="hciProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b5e-FZ-yW0">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="어디를 운동하고 싶으세요?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jhf-xh-cZc">
+                                <rect key="frame" x="492" y="161" width="547" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" backIndicatorImage="ic_back" backIndicatorTransitionMaskImage="ic_back" translatesAutoresizingMaskIntoConstraints="NO" id="y9l-Hh-fjs">
+                                <rect key="frame" x="1" y="3" width="1023" height="44"/>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bt4-Ar-XEN">
+                                <rect key="frame" x="1" y="64" width="512" height="768"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img_muscle" translatesAutoresizingMaskIntoConstraints="NO" id="sDk-FR-Vqy">
+                                        <rect key="frame" x="131" y="87" width="283" height="450"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.074509803921568626" green="0.078431372549019607" blue="0.094117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="주로 운동하고 싶은 부위를 모두 터치해주세요." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="611-jV-UZV">
+                                <rect key="frame" x="594" y="275" width="343" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="근육선택" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQx-Dw-qXa">
+                                <rect key="frame" x="542" y="76" width="61" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" red="0.96862745098039216" green="0.81568627450980391" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&gt;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KG5-5k-EKP">
+                                <rect key="frame" x="611" y="76" width="61" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="운동 숙련도 선택" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKh-io-HNm">
+                                <rect key="frame" x="701" y="89" width="105" height="19.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&gt;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arS-tt-jil">
+                                <rect key="frame" x="814" y="76" width="61" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="주기 선택" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GES-dT-5za">
+                                <rect key="frame" x="883" y="76" width="105" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap all the parts to be trained." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7M8-0V-hop">
+                                <rect key="frame" x="569" y="411" width="392" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICk-vt-486">
+                                <rect key="frame" x="725" y="583" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Atc-IQ-gBR"/>
+                                    <constraint firstAttribute="height" constant="80" id="r2g-in-Npa"/>
+                                </constraints>
+                                <state key="normal" image="ic_next"/>
+                                <connections>
+                                    <action selector="onTouchNext:" destination="KM0-P1-fOa" eventType="touchUpInside" id="C6s-dd-yQN"/>
+                                    <segue destination="jh7-Mc-KDu" kind="show" id="ZQa-Q1-zfF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16074991229999999" green="0.16072323920000001" blue="0.16484043000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ICk-vt-486" firstAttribute="centerX" secondItem="fXH-NW-8l8" secondAttribute="centerX" constant="253" id="0wl-Qi-Fgn"/>
+                            <constraint firstItem="Bt4-Ar-XEN" firstAttribute="height" secondItem="b5e-FZ-yW0" secondAttribute="height" id="1YW-Uh-BtG"/>
+                            <constraint firstItem="Bt4-Ar-XEN" firstAttribute="leading" secondItem="y9l-Hh-fjs" secondAttribute="leading" id="5M7-5w-PZY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="y9l-Hh-fjs" secondAttribute="trailing" constant="-20" id="9Ym-PX-q1a"/>
+                            <constraint firstItem="Bt4-Ar-XEN" firstAttribute="width" secondItem="b5e-FZ-yW0" secondAttribute="width" multiplier="1/2" id="MkQ-A3-2UU"/>
+                            <constraint firstItem="fXH-NW-8l8" firstAttribute="bottom" secondItem="ICk-vt-486" secondAttribute="bottom" constant="56" id="QEc-WV-tUD"/>
+                            <constraint firstItem="Bt4-Ar-XEN" firstAttribute="leading" secondItem="fXH-NW-8l8" secondAttribute="leading" constant="1" id="TDR-E1-TXl"/>
+                            <constraint firstItem="Bt4-Ar-XEN" firstAttribute="top" secondItem="y9l-Hh-fjs" secondAttribute="bottom" constant="17" id="gn4-Du-ceL"/>
+                            <constraint firstItem="Bt4-Ar-XEN" firstAttribute="top" secondItem="fXH-NW-8l8" secondAttribute="top" id="xI2-TR-da9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fXH-NW-8l8"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oXr-Ds-Dyv" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2036" y="1340"/>
+        </scene>
+        <!--주기 선택-->
+        <scene sceneID="Skt-cG-XKL">
+            <objects>
+                <viewController title="주기 선택" id="B39-yB-uqD" customClass="PickerViewController" customModule="hciProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n3H-92-pu4">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="어떤 주기로 운동하실 건가요?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jBx-iP-ka4">
+                                <rect key="frame" x="239" y="193" width="547" height="106"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="106" id="CXM-oF-dio"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" backIndicatorImage="ic_back" backIndicatorTransitionMaskImage="ic_back" translatesAutoresizingMaskIntoConstraints="NO" id="cPh-wd-w9T">
+                                <rect key="frame" x="0.0" y="3" width="1024" height="44"/>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="근육선택" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1s1-oC-AAK">
+                                <rect key="frame" x="292" y="89" width="55.5" height="19.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="운동 숙련도 선택" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4HF-Hd-1nT">
+                                <rect key="frame" x="445.5" y="89" width="105" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&gt;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QdA-H4-Agh">
+                                <rect key="frame" x="561" y="76" width="61" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="주기 선택" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iA-Dt-JX3">
+                                <rect key="frame" x="653" y="76" width="59.5" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" red="0.96862745100000003" green="0.81568627449999997" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Select exercise cycle." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFs-nT-QDo">
+                                <rect key="frame" x="316" y="275" width="392" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tvl-CJ-MsV">
+                                <rect key="frame" x="467" y="591" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="36i-Nk-ITg"/>
+                                    <constraint firstAttribute="width" constant="80" id="PAH-6u-3WY"/>
+                                </constraints>
+                                <state key="normal" image="ic_next"/>
+                                <connections>
+                                    <segue destination="C5i-EA-sV6" kind="show" id="Dfh-uT-nLT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="승모근, 광배근" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9i7-jn-1Pe">
+                                <rect key="frame" x="274" y="112" width="92" height="19.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kfP-XJ-aky">
+                                <rect key="frame" x="355" y="359" width="444" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.96862745100000003" green="0.81568627449999997" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="매일" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SuQ-h7-5Et">
+                                <rect key="frame" x="94" y="414" width="392" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&gt;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNM-Bk-MpY">
+                                <rect key="frame" x="355" y="88" width="61" height="19.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="중급자" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzA-r8-dgG">
+                                <rect key="frame" x="452" y="112" width="92" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16074991229999999" green="0.16072323920000001" blue="0.16484043000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cPh-wd-w9T" firstAttribute="centerX" secondItem="WFs-nT-QDo" secondAttribute="centerX" id="NbQ-Xu-VBa"/>
+                            <constraint firstItem="usR-sj-GTR" firstAttribute="bottom" secondItem="Tvl-CJ-MsV" secondAttribute="bottom" constant="48" id="Nxb-yP-FZM"/>
+                            <constraint firstItem="cPh-wd-w9T" firstAttribute="centerX" secondItem="jBx-iP-ka4" secondAttribute="centerX" id="VfQ-4D-o7c"/>
+                            <constraint firstItem="jBx-iP-ka4" firstAttribute="leading" secondItem="usR-sj-GTR" secondAttribute="leading" constant="239" id="VnE-NW-5IP"/>
+                            <constraint firstItem="Tvl-CJ-MsV" firstAttribute="centerX" secondItem="usR-sj-GTR" secondAttribute="centerX" constant="-5" id="XPJ-JZ-nGi"/>
+                            <constraint firstItem="cPh-wd-w9T" firstAttribute="top" secondItem="n3H-92-pu4" secondAttribute="topMargin" constant="-61" id="gnm-ZT-qsR"/>
+                            <constraint firstItem="cPh-wd-w9T" firstAttribute="leading" secondItem="usR-sj-GTR" secondAttribute="leading" id="kBK-cC-PF9"/>
+                            <constraint firstItem="jBx-iP-ka4" firstAttribute="top" secondItem="n3H-92-pu4" secondAttribute="top" constant="193" id="kK8-kN-ied"/>
+                            <constraint firstItem="cPh-wd-w9T" firstAttribute="width" secondItem="n3H-92-pu4" secondAttribute="width" id="x1r-MS-mds"/>
+                            <constraint firstItem="WFs-nT-QDo" firstAttribute="leading" secondItem="usR-sj-GTR" secondAttribute="leading" constant="316" id="yVR-oX-DfU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="usR-sj-GTR"/>
+                    </view>
+                    <connections>
+                        <outlet property="timePicker" destination="kfP-XJ-aky" id="9Bh-dF-E7A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E24-OW-3Ly" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3333" y="1348"/>
+        </scene>
+        <!--운동 숙련도 선택-->
+        <scene sceneID="QKP-1f-yBt">
+            <objects>
+                <viewController title="운동 숙련도 선택" id="jh7-Mc-KDu" customClass="ExpViewController" customModule="hciProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3xx-aj-Vxr">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="선택한 운동에 얼마나 익숙한가요?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGf-9b-Yka">
+                                <rect key="frame" x="239" y="189" width="547" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" backIndicatorImage="ic_back" backIndicatorTransitionMaskImage="ic_back" translatesAutoresizingMaskIntoConstraints="NO" id="pzm-AQ-GC8">
+                                <rect key="frame" x="0.0" y="3" width="1083.5" height="44"/>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="근육선택" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbU-sR-fbc">
+                                <rect key="frame" x="292" y="107" width="55.5" height="19.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="운동 숙련도 선택" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGL-UR-Dzo">
+                                <rect key="frame" x="445" y="107" width="105" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" red="0.96862745100000003" green="0.81568627449999997" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&gt;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vob-2D-BHO">
+                                <rect key="frame" x="561" y="94" width="61" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="주기 선택" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iK3-4D-5xc">
+                                <rect key="frame" x="653" y="94" width="59.5" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="다음 버튼 중에 하나를 선택해주세요." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w81-bh-onX">
+                                <rect key="frame" x="239" y="271" width="547" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="798-jD-RQ2">
+                                <rect key="frame" x="472" y="591" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="lXV-MA-iqw"/>
+                                    <constraint firstAttribute="height" constant="80" id="q1i-sa-nfe"/>
+                                </constraints>
+                                <state key="normal" image="ic_next"/>
+                                <connections>
+                                    <segue destination="B39-yB-uqD" kind="show" id="m89-GX-eDY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="승모근, 광배근" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mks-fU-IWW">
+                                <rect key="frame" x="274" y="130" width="92" height="19.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&gt;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7r0-H0-wXv">
+                                <rect key="frame" x="355" y="106" width="61" height="19.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sA-DO-Ea0">
+                                <rect key="frame" x="183" y="391" width="208" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="btn_novice"/>
+                                <state key="selected" image="btn_novice_selected"/>
+                                <connections>
+                                    <action selector="onTouchNoviceBtn:" destination="jh7-Mc-KDu" eventType="touchUpInside" id="xUl-Vo-rlj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="905-CJ-XzF">
+                                <rect key="frame" x="416" y="391" width="208" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="btn_intermediate"/>
+                                <state key="selected" image="btn_intermediate_selected"/>
+                                <connections>
+                                    <action selector="onTouchIntermediateBtn:" destination="jh7-Mc-KDu" eventType="touchUpInside" id="qz1-FK-9c2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAy-4t-BY8">
+                                <rect key="frame" x="655" y="391" width="208" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="btn_expert"/>
+                                <state key="selected" image="btn_expert_selected"/>
+                                <connections>
+                                    <action selector="onTouchExpertBtn:" destination="jh7-Mc-KDu" eventType="touchUpInside" id="cgJ-Nk-mvx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select exercise proficiency." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoh-VS-fzb">
+                                <rect key="frame" x="324" y="318" width="392" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16074991229999999" green="0.16072323920000001" blue="0.16484043000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="798-jD-RQ2" firstAttribute="centerX" secondItem="rMw-qv-QWr" secondAttribute="centerX" id="eez-FQ-y09"/>
+                            <constraint firstItem="pzm-AQ-GC8" firstAttribute="leading" secondItem="rMw-qv-QWr" secondAttribute="leading" id="nTd-9l-mwy"/>
+                            <constraint firstItem="rMw-qv-QWr" firstAttribute="bottom" secondItem="798-jD-RQ2" secondAttribute="bottom" constant="48" id="zjJ-BW-lxe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rMw-qv-QWr"/>
+                    </view>
+                    <connections>
+                        <outlet property="expert" destination="cAy-4t-BY8" id="bTP-Hd-IzK"/>
+                        <outlet property="intermediate" destination="905-CJ-XzF" id="EhL-32-QE2"/>
+                        <outlet property="novice" destination="1sA-DO-Ea0" id="JAF-Pp-rQJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uTz-tw-65V" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2700" y="1347.65625"/>
+        </scene>
+        <!--설정 완료-->
+        <scene sceneID="yE2-jj-Qai">
+            <objects>
+                <viewController title="설정 완료" id="C5i-EA-sV6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8KA-nx-C3F">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="이제 모두 완료 되었어요!  아래 버튼을 눌러 운동을 시작하세요. :) " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRL-Qk-hPF">
+                                <rect key="frame" x="110" y="241" width="795" height="158"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" backIndicatorImage="ic_back" backIndicatorTransitionMaskImage="ic_back" translatesAutoresizingMaskIntoConstraints="NO" id="RFc-dR-fN3">
+                                <rect key="frame" x="0.0" y="3" width="1024" height="44"/>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Now tap the button below to start exercise :)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOT-aD-Gsw">
+                                <rect key="frame" x="131" y="416" width="763" height="39"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJb-tX-qSW">
+                                <rect key="frame" x="467" y="591" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="DEy-Qz-9qo"/>
+                                    <constraint firstAttribute="height" constant="80" id="NmQ-1x-4sU"/>
+                                </constraints>
+                                <state key="normal" image="ic_next"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="근육선택" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGE-NV-IEr">
+                                <rect key="frame" x="311" y="112" width="55.5" height="19.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="운동 숙련도 선택" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXk-bJ-CU8">
+                                <rect key="frame" x="465" y="112" width="105" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&gt;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kex-li-j3C">
+                                <rect key="frame" x="580" y="99" width="61" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="주기 선택" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15b-WB-xFu">
+                                <rect key="frame" x="672" y="99" width="59.5" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="승모근, 광배근" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91Y-yn-7qI">
+                                <rect key="frame" x="293" y="135" width="92" height="19.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" red="1" green="0.77360922099999996" blue="0.021801328290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&gt;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVQ-mX-ts7">
+                                <rect key="frame" x="374" y="111" width="61" height="19.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="중급자" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQF-pQ-XZf">
+                                <rect key="frame" x="471" y="135" width="92" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" red="1" green="0.77360922099999996" blue="0.021801328290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="매일 30분" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qdk-Ho-Dbx">
+                                <rect key="frame" x="655" y="135" width="92" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" red="1" green="0.77360922099999996" blue="0.021801328290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16074991229999999" green="0.16072323920000001" blue="0.16484043000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RFc-dR-fN3" firstAttribute="centerX" secondItem="sOT-aD-Gsw" secondAttribute="centerX" id="3yC-tC-YIe"/>
+                            <constraint firstItem="RFc-dR-fN3" firstAttribute="top" secondItem="8KA-nx-C3F" secondAttribute="topMargin" constant="-61" id="EQ3-qD-m3g"/>
+                            <constraint firstItem="RFc-dR-fN3" firstAttribute="leading" secondItem="mun-wg-1qQ" secondAttribute="leading" id="Ef5-hV-ivY"/>
+                            <constraint firstItem="RFc-dR-fN3" firstAttribute="width" secondItem="8KA-nx-C3F" secondAttribute="width" id="FDz-N7-tEc"/>
+                            <constraint firstItem="mun-wg-1qQ" firstAttribute="bottom" secondItem="dJb-tX-qSW" secondAttribute="bottom" constant="48" id="R8E-Xz-tNl"/>
+                            <constraint firstItem="dJb-tX-qSW" firstAttribute="centerX" secondItem="mun-wg-1qQ" secondAttribute="centerX" constant="-5" id="jvB-IB-hA7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mun-wg-1qQ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Wy-it-rKw" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3953.9062499999995" y="1347.65625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn_expert" width="416" height="158"/>
+        <image name="btn_expert_selected" width="416" height="158"/>
+        <image name="btn_fix" width="480" height="160"/>
+        <image name="btn_intermediate" width="416" height="158"/>
+        <image name="btn_intermediate_selected" width="416" height="158"/>
+        <image name="btn_novice" width="416" height="158"/>
+        <image name="btn_novice_selected" width="416" height="158"/>
+        <image name="first" width="30" height="30"/>
+        <image name="ic_back" width="28" height="72"/>
+        <image name="ic_next" width="240" height="240"/>
+        <image name="img_muscle" width="1036" height="1536"/>
+        <image name="second" width="30" height="30"/>
+    </resources>
+</document>
