@@ -8,16 +8,19 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController,UIWebViewDelegate{
 
     @IBOutlet weak var ripplesImg: UIImageView!
     @IBOutlet var startRecogBtn: UIButton!
     @IBOutlet var currentTime: UILabel!
     @IBOutlet var webView: UIWebView!
     var id : String = ""
+    var timer = Timer()
+    var isTimerRunning = false
+    var seconds : Int = 30
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        webView.delegate = self
         loadYoutube(webView: webView,videoID: id)
         // Do any additional setup after loading the view.
     }
@@ -36,5 +39,33 @@ class DetailViewController: UIViewController {
             else { return }
         // load your web request
         webView.loadRequest( URLRequest(url: youtubeURL as URL) )
+        if !webView.isLoading  {
+            timer.invalidate()
+        }
     }
+    
+    @objc func updateTimer(){
+        if seconds == 0 {
+            timer.invalidate()
+            seconds = 30
+        }else{
+            seconds -= 1
+            currentTime.text = "\(seconds)"
+        }
+       
+    }
+    func runTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: #selector(self.updateTimer), userInfo: nil, repeats: true)
+        isTimerRunning = true
+    }
+    
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        let when = DispatchTime.now() + 10
+        DispatchQueue.main.asyncAfter(deadline: when) {
+            if !self.isTimerRunning{
+                self.runTimer()
+            }
+        }
+    }
+    
 }

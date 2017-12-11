@@ -70,7 +70,7 @@
                         <color key="backgroundColor" red="0.16074991229999999" green="0.16072323920000001" blue="0.16484043000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="홈" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="홈 Home" image="first" id="acW-dT-cKf"/>
                     <navigationItem key="navigationItem" title="홈 Home" id="Mc9-Lv-BPm"/>
                     <connections>
                         <outlet property="routineScrollView" destination="DKh-Dp-BX0" id="aag-mi-XrW"/>
@@ -79,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="814" y="-320"/>
+            <point key="canvasLocation" x="1243" y="-320"/>
         </scene>
         <!--운동검색 Search Exercise-->
         <scene sceneID="wg7-f3-ORb">
@@ -275,7 +275,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J7G-2V-rnU" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1386" y="1340"/>
+            <point key="canvasLocation" x="1786" y="1340"/>
         </scene>
         <!--근육 선택-->
         <scene sceneID="xfn-ZX-bDQ">
@@ -384,7 +384,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oXr-Ds-Dyv" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2036" y="1340"/>
+            <point key="canvasLocation" x="2814" y="1340"/>
         </scene>
         <!--주기 선택-->
         <scene sceneID="Skt-cG-XKL">
@@ -506,7 +506,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E24-OW-3Ly" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3333" y="1348"/>
+            <point key="canvasLocation" x="4972" y="1340"/>
         </scene>
         <!--운동 숙련도 선택-->
         <scene sceneID="QKP-1f-yBt">
@@ -637,7 +637,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uTz-tw-65V" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2700" y="1347.65625"/>
+            <point key="canvasLocation" x="3889" y="1340"/>
         </scene>
         <!--설정 완료-->
         <scene sceneID="yE2-jj-Qai">
@@ -742,7 +742,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Wy-it-rKw" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3953.9062499999995" y="1347.65625"/>
+            <point key="canvasLocation" x="6076" y="1340"/>
         </scene>
         <!--영상 상세-->
         <scene sceneID="bG5-uy-75a">
@@ -774,7 +774,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img_muscle" translatesAutoresizingMaskIntoConstraints="NO" id="3ln-z5-vjp">
-                                        <rect key="frame" x="20" y="18" width="140" height="225"/>
+                                        <rect key="frame" x="25" y="15" width="130" height="228"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
@@ -792,7 +792,7 @@
                                 <rect key="frame" x="331" y="610" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="18" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZj-sj-4Wz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZj-sj-4Wz">
                                 <rect key="frame" x="379" y="583" width="98" height="94"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
@@ -841,7 +841,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ARy-YE-RCD" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1980" y="-320"/>
+            <point key="canvasLocation" x="2594" y="-320"/>
         </scene>
     </scenes>
     <resources>
