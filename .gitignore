@@ -3,6 +3,7 @@ Podfile.lock
 *.mov
 *.sketch
 hciProject.xcodeproj/
+hciProject.xcworkspace
 fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
