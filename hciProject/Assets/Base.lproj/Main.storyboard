@@ -75,6 +75,7 @@
                     <connections>
                         <outlet property="routineScrollView" destination="DKh-Dp-BX0" id="aag-mi-XrW"/>
                         <outlet property="scrollView" destination="xXO-sR-m3R" id="oJN-bP-96f"/>
+                        <outlet property="topTitle" destination="gdt-zN-zNr" id="mmC-bj-ADd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -151,7 +152,6 @@
                                 </constraints>
                                 <state key="normal" image="btn_fix"/>
                                 <connections>
-                                    <action selector="onTouchNext:" destination="KEz-VU-BQ1" eventType="touchUpInside" id="p7x-b1-NYc"/>
                                     <segue destination="JcT-eo-Aha" kind="show" animates="NO" id="26z-SL-Wkn"/>
                                 </connections>
                             </button>
@@ -211,6 +211,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="설정" image="second" id="OGy-wE-b0V"/>
                     <navigationItem key="navigationItem" title="설정" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="TeY-yi-r4Z"/>
+                    <connections>
+                        <outlet property="muscleLabel" destination="1bC-De-zpG" id="c35-Bg-N0b"/>
+                        <outlet property="proficiencyLabel" destination="p8x-Mo-7UM" id="Lkz-WD-TkU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ATf-2u-0q8" sceneMemberID="firstResponder"/>
             </objects>
@@ -219,7 +223,7 @@
         <!--운동 추천-->
         <scene sceneID="smR-UT-aEq">
             <objects>
-                <viewController title="운동 추천" id="JcT-eo-Aha" customClass="SettingsViewController" customModule="hciProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="운동 추천" id="JcT-eo-Aha" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bIr-Oh-D9J">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -260,7 +264,6 @@
                                 </constraints>
                                 <state key="normal" image="ic_next"/>
                                 <connections>
-                                    <action selector="onTouchNext:" destination="JcT-eo-Aha" eventType="touchUpInside" id="5GB-kk-9WK"/>
                                     <segue destination="KM0-P1-fOa" kind="show" id="70r-h1-QKS"/>
                                 </connections>
                             </button>
@@ -280,7 +283,7 @@
         <!--근육 선택-->
         <scene sceneID="xfn-ZX-bDQ">
             <objects>
-                <viewController title="근육 선택" id="KM0-P1-fOa" customClass="SettingsViewController" customModule="hciProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="근육 선택" id="KM0-P1-fOa" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b5e-FZ-yW0">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -362,7 +365,6 @@
                                 </constraints>
                                 <state key="normal" image="ic_next"/>
                                 <connections>
-                                    <action selector="onTouchNext:" destination="KM0-P1-fOa" eventType="touchUpInside" id="C6s-dd-yQN"/>
                                     <segue destination="jh7-Mc-KDu" kind="show" id="ZQa-Q1-zfF"/>
                                 </connections>
                             </button>
@@ -642,7 +644,7 @@
         <!--설정 완료-->
         <scene sceneID="yE2-jj-Qai">
             <objects>
-                <viewController title="설정 완료" id="C5i-EA-sV6" sceneMemberID="viewController">
+                <viewController title="설정 완료" id="C5i-EA-sV6" customClass="SettingsFinalViewController" customModule="hciProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8KA-nx-C3F">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -670,6 +672,9 @@
                                     <constraint firstAttribute="height" constant="80" id="NmQ-1x-4sU"/>
                                 </constraints>
                                 <state key="normal" image="ic_next"/>
+                                <connections>
+                                    <action selector="onEnd:" destination="C5i-EA-sV6" eventType="touchUpInside" id="11g-AK-TBw"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="근육선택" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGE-NV-IEr">
                                 <rect key="frame" x="311" y="112" width="55.5" height="19.5"/>

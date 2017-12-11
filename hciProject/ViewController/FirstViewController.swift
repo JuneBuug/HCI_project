@@ -14,12 +14,22 @@ class FirstViewController: UIViewController {
     var IDList = ["P8CDv4dgHEM","llwXGZlgdU0","XTH5saFBDqA","1KGU6iB5MVE","wc_PizWNp6k"]
     var list : [Video] = []
    
+    @IBOutlet weak var topTitle: UILabel!
     var globalID : String = "llwXGZlgdU0"
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var routineScrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
         setScrollView()
+        
+        if Global.isRecommended {
+            topTitle.text = "이어보기 Continue Watching"
+        }else{
+            topTitle.text = "가장 많이 본 영상 Top workout Videos"
+        }
+        
+        // Notification : Recommened가 설정됐을 때
+        NotificationCenter.default.addObserver(self, selector: #selector(self.onRecommended), name: NSNotification.Name.init("recommendationKey"), object: nil)
         
         list.append(Video(id: "P8CDv4dgHEM", videoName: "전신운동 춤 갓 조쉬 앤 바믜", videoEng: "Dance good for losing weight"))
         list.append(Video(id: "llwXGZlgdU0", videoName: "레베카 루이즈 운동", videoEng: "Rebeca Louis Workout"))
@@ -37,6 +47,13 @@ class FirstViewController: UIViewController {
     }
     
     
+    @objc func onRecommended(){
+        if Global.isRecommended {
+            topTitle.text = "이어보기 Continue Watching"
+        }else{
+            topTitle.text = "가장 많이 본 영상 Top workout Videos"
+        }
+    }
     @objc func pressed(){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
