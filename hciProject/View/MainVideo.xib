@@ -43,6 +43,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="nextBtn" destination="SrG-4H-0BT" id="Vx3-M0-cMc"/>
                 <outlet property="videoName" destination="mwY-Xf-j2u" id="DUL-HZ-SkL"/>
                 <outlet property="webView" destination="qE6-eQ-anb" id="Ll5-mj-5CJ"/>
             </connections>

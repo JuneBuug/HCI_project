@@ -11,6 +11,7 @@ import UIKit
 class MainVideo: UIView {
 
   
+    @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet var webView: UIWebView!
     var url : String = ""
     @IBOutlet var videoName: UILabel!
@@ -22,7 +23,9 @@ class MainVideo: UIView {
     }
     */
     @IBAction func onClickBtn(_ sender: Any) {
+       
     }
+    
     class func instanceFromNib() -> MainVideo {
         return UINib(nibName: "MainVideo", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! MainVideo
     }

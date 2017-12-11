@@ -13,6 +13,8 @@ class FirstViewController: UIViewController {
     var youtubeIDList = ["llwXGZlgdU0","XTH5saFBDqA"]
     var IDList = ["P8CDv4dgHEM","llwXGZlgdU0","XTH5saFBDqA","1KGU6iB5MVE","wc_PizWNp6k"]
     var list : [Video] = []
+   
+    var globalID : String = "llwXGZlgdU0"
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var routineScrollView: UIScrollView!
     override func viewDidLoad() {
@@ -33,7 +35,14 @@ class FirstViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    
+    @objc func pressed(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        vc.id = globalID
+        self.show(vc, sender: nil)
+    }
     
     func loadYoutube(webView: UIWebView, videoID videoID:String) {
         // create a custom youtubeURL with the video ID
@@ -59,6 +68,7 @@ class FirstViewController: UIViewController {
             }else{
                  videoView.videoName.text = "10분 심장 강화 운동"
             }
+            videoView.nextBtn.addTarget(nil, action: #selector(self.pressed), for: .touchUpInside)
             loadYoutube(webView: videoView.webView, videoID: id)
             scrollView.addSubview(videoView)
             xPosition += webViewWidth+40
@@ -81,10 +91,9 @@ class FirstViewController: UIViewController {
             routineScrollView.addSubview(routineView)
             xPosition += webViewWidth+20
         }
-        
-        
     }
-
+    
+   
 
 }
 
