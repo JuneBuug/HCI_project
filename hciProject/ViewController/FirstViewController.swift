@@ -14,6 +14,7 @@ class FirstViewController: UIViewController {
     var IDList = ["P8CDv4dgHEM","llwXGZlgdU0","XTH5saFBDqA","1KGU6iB5MVE","wc_PizWNp6k"]
     var list : [Video] = []
    
+    @IBOutlet weak var aiView: UIView!
     @IBOutlet weak var topTitle: UILabel!
     var globalID : String = "llwXGZlgdU0"
     @IBOutlet var scrollView: UIScrollView!
@@ -31,6 +32,9 @@ class FirstViewController: UIViewController {
         // Notification : Recommened가 설정됐을 때
         NotificationCenter.default.addObserver(self, selector: #selector(self.onRecommended), name: NSNotification.Name.init("recommendationKey"), object: nil)
         
+        // Notification : Ad가 설정됐을 때
+        NotificationCenter.default.addObserver(self, selector: #selector(self.onAd), name: NSNotification.Name.init("adKey"), object: nil)
+        
         list.append(Video(id: "P8CDv4dgHEM", videoName: "전신운동 춤 갓 조쉬 앤 바믜", videoEng: "Dance good for losing weight"))
         list.append(Video(id: "llwXGZlgdU0", videoName: "레베카 루이즈 운동", videoEng: "Rebeca Louis Workout"))
         list.append(Video(id: "XTH5saFBDqA", videoName: "다리운동", videoEng: "Leg Workout"))
@@ -38,6 +42,8 @@ class FirstViewController: UIViewController {
         list.append(Video(id: "wc_PizWNp6k", videoName: "비욘세 Move Your body", videoEng: "Beyonce : Move Your body"))
         setRoutineScrollView()
         
+        aiView.layer.cornerRadius = 4.0
+        aiView.clipsToBounds = true
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -46,12 +52,32 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func onCloseAd(_ sender: Any) {
+        UIView.animate(withDuration: 2.0, animations: {
+            self.aiView.alpha = 0.0
+            self.aiView.isHidden = true
+        })
+    }
+    
+    @IBAction func onTouchYoga(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        vc.id = "2c_oijA34Z8"
+        self.show(vc, sender: nil)
+    }
     
     @objc func onRecommended(){
         if Global.isRecommended {
             topTitle.text = "이어보기 Continue Watching"
         }else{
             topTitle.text = "가장 많이 본 영상 Top workout Videos"
+        }
+    }
+    
+    @objc func onAd(){
+        if (Global.adVar != 0) && (Global.adVar % 2 == 0){
+            aiView.isHidden = false
+            aiView.alpha = 1.0
         }
     }
     @objc func pressed(){

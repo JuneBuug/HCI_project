@@ -66,13 +66,55 @@
                                 <rect key="frame" x="20" y="138" width="991" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </scrollView>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Ld-On-6wm">
+                                <rect key="frame" x="20" y="446" width="991" height="109"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="강도 높은 운동을 자주 하신 것 같아요. 오늘은 이런 운동 어떠세요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwA-5N-Bg1">
+                                        <rect key="frame" x="204" y="25" width="675" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeH-FH-omQ">
+                                        <rect key="frame" x="204" y="54" width="105" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="힐링 요가 &gt; ">
+                                            <color key="titleColor" red="1" green="0.77360922099999996" blue="0.021801328290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onTouchYoga:" destination="9pv-A4-QxB" eventType="touchUpInside" id="8zK-gL-eBZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2G-ym-Pnh">
+                                        <rect key="frame" x="676" y="51" width="130" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="10분 스트레칭 &gt;">
+                                            <color key="titleColor" red="1" green="0.77360922099999996" blue="0.021801328290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kn-Du-FMG">
+                                        <rect key="frame" x="14" y="13" width="24" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="ic_close"/>
+                                        <connections>
+                                            <action selector="onCloseAd:" destination="9pv-A4-QxB" eventType="touchUpInside" id="CLu-cN-K9F"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.17724296789999999" green="0.2185845673" blue="0.3803080949" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.16074991229999999" green="0.16072323920000001" blue="0.16484043000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="홈 Home" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="홈 Home" image="ic_home" id="acW-dT-cKf"/>
                     <navigationItem key="navigationItem" title="홈 Home" id="Mc9-Lv-BPm"/>
                     <connections>
+                        <outlet property="aiView" destination="3Ld-On-6wm" id="L5M-cB-jYW"/>
                         <outlet property="routineScrollView" destination="DKh-Dp-BX0" id="aag-mi-XrW"/>
                         <outlet property="scrollView" destination="xXO-sR-m3R" id="oJN-bP-96f"/>
                         <outlet property="topTitle" destination="gdt-zN-zNr" id="mmC-bj-ADd"/>
@@ -80,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1243" y="-320"/>
+            <point key="canvasLocation" x="1242.7734375" y="-320.3125"/>
         </scene>
         <!--운동검색 Search Exercise-->
         <scene sceneID="wg7-f3-ORb">
@@ -92,7 +134,7 @@
                         <color key="backgroundColor" red="0.16074991229999999" green="0.16072323920000001" blue="0.16484043000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="운동검색 Search Exercise" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="운동검색 Search Exercise" image="first" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -209,7 +251,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tNg-xq-J3t"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="설정" image="second" id="OGy-wE-b0V"/>
+                    <tabBarItem key="tabBarItem" title="설정 Settings" image="ic_settings" id="OGy-wE-b0V"/>
                     <navigationItem key="navigationItem" title="설정" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="TeY-yi-r4Z"/>
                     <connections>
                         <outlet property="muscleLabel" destination="1bC-De-zpG" id="c35-Bg-N0b"/>
@@ -860,9 +902,11 @@
         <image name="first" width="30" height="30"/>
         <image name="ic_back" width="28" height="72"/>
         <image name="ic_clk" width="88" height="88"/>
+        <image name="ic_close" width="39" height="38"/>
+        <image name="ic_home" width="34" height="35"/>
         <image name="ic_next" width="240" height="240"/>
+        <image name="ic_settings" width="36" height="35"/>
         <image name="img_muscle" width="1036" height="1536"/>
         <image name="ripples" width="365" height="58"/>
-        <image name="second" width="30" height="30"/>
     </resources>
 </document>

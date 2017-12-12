@@ -22,9 +22,13 @@ class DetailViewController: UIViewController,UIWebViewDelegate{
         super.viewDidLoad()
         webView.delegate = self
         loadYoutube(webView: webView,videoID: id)
+       
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+         Global.adVar += 1
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

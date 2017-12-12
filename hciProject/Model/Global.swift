@@ -15,4 +15,9 @@ struct Global{
             NotificationCenter.default.post(name: NSNotification.Name.init("recommendationKey"), object: nil)
         }
     }
+    public static var adVar = 0 {
+        didSet {
+            NotificationCenter.default.post(name: NSNotification.Name.init("adKey"), object: nil)
+        }
+    }
 }
