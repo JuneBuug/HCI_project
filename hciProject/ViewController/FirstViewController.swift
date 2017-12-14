@@ -14,9 +14,11 @@ class FirstViewController: UIViewController {
     var IDList = ["P8CDv4dgHEM","llwXGZlgdU0","XTH5saFBDqA","1KGU6iB5MVE","wc_PizWNp6k"]
     var list : [Video] = []
    
+    @IBOutlet weak var subTitle: UILabel!
+    @IBOutlet weak var subTitle2: UILabel!
     @IBOutlet weak var aiView: UIView!
     @IBOutlet weak var topTitle: UILabel!
-    var globalID : String = "llwXGZlgdU0"
+    var globalID : String = "50GX-0jydXM"
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var routineScrollView: UIScrollView!
     override func viewDidLoad() {
@@ -25,8 +27,12 @@ class FirstViewController: UIViewController {
         
         if Global.isRecommended {
             topTitle.text = "이어보기 Continue Watching"
+            subTitle.text = "\'광배근\' 추천 루틴 Recommendation for \'Latissimus dorsi\'"
+            subTitle2.text = "중급자용 For Intermediate"
         }else{
             topTitle.text = "가장 많이 본 영상 Top workout Videos"
+            subTitle.text = "\'상복근\' 추천 루틴 Recommendation for \'Upper Abs\'"
+            subTitle2.text = "초보용 For Beginners"
         }
         
         // Notification : Recommened가 설정됐을 때
@@ -69,13 +75,17 @@ class FirstViewController: UIViewController {
     @objc func onRecommended(){
         if Global.isRecommended {
             topTitle.text = "이어보기 Continue Watching"
+            subTitle.text = "\'광배근\' 추천 루틴 Recommendation for \'Latissimus dorsi\'"
+            subTitle2.text = "중급자용 For Intermediate"
         }else{
             topTitle.text = "가장 많이 본 영상 Top workout Videos"
+            subTitle.text = "\'상복근\' 추천 루틴 Recommendation for \'Upper Abs\'"
+            subTitle2.text = "초보용 For Beginners"
         }
     }
     
     @objc func onAd(){
-        if (Global.adVar != 0) && (Global.adVar % 2 == 0){
+        if (Global.adVar != 0) && (Global.adVar % 3 == 0){
             aiView.isHidden = false
             aiView.alpha = 1.0
         }
@@ -90,7 +100,7 @@ class FirstViewController: UIViewController {
     func loadYoutube(webView: UIWebView, videoID videoID:String) {
         // create a custom youtubeURL with the video ID
         guard
-            let youtubeURL = NSURL(string: "https://www.youtube.com/embed/\(videoID)")
+            let youtubeURL = NSURL(string: "https://www.youtube.com/embed/\(videoID)")        
             else { return }
         // load your web request
         webView.loadRequest( URLRequest(url: youtubeURL as URL) )

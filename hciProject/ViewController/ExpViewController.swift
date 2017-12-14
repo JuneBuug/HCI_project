@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import AVFoundation
 class ExpViewController: UIViewController {
 
     @IBOutlet weak var novice: UIButton!
@@ -17,6 +17,14 @@ class ExpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let synthesizer = AVSpeechSynthesizer()
+        let synthesizer2 = AVSpeechSynthesizer()
+        
+        let utterance = AVSpeechUtterance(string: "선택한 운동에 얼마나 익숙한가요? 다음 버튼 중 하나를 선택해주세요.")
+        utterance.voice = AVSpeechSynthesisVoice(language: "ko-KR")
+        utterance.rate = 0.5
+        
+        synthesizer.speak(utterance)
 
         // Do any additional setup after loading the view.
     }

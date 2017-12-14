@@ -1,5 +1,5 @@
 //
-//  SettingsFinalViewController.swift
+//  RecommendationViewController.swift
 //  hciProject
 //
 //  Created by 준킴 on 2017. 12. 12..
@@ -8,26 +8,20 @@
 
 import UIKit
 import AVFoundation
-class SettingsFinalViewController: UIViewController {
+class RecommendationViewController: UIViewController {
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         let synthesizer = AVSpeechSynthesizer()
         
-        let utterance = AVSpeechUtterance(string: "이제 모두 완료되었어요. 아래 버튼을 눌러 운동을 시작하세요.")
+        let utterance = AVSpeechUtterance(string: "안녕하세요! 원하는 운동을 추천해드리기 위해, 몇가지만 여쭤볼게요.")
         utterance.voice = AVSpeechSynthesisVoice(language: "ko-KR")
         utterance.rate = 0.5
         
         synthesizer.speak(utterance)
-        
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func onEnd(_ sender: Any) {
-        Global.isRecommended = true
-        _ = navigationController?.popToRootViewController(animated: true)
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

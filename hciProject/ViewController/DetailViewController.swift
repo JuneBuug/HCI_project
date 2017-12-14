@@ -7,10 +7,10 @@
 //
 
 import UIKit
-
+import AVFoundation
 class DetailViewController: UIViewController,UIWebViewDelegate{
 
-    @IBOutlet weak var ripplesImg: UIImageView!
+    @IBOutlet weak var recogLabel: UILabel!
     @IBOutlet var startRecogBtn: UIButton!
     @IBOutlet var currentTime: UILabel!
     @IBOutlet var webView: UIWebView!
@@ -52,7 +52,29 @@ class DetailViewController: UIViewController,UIWebViewDelegate{
         if seconds == 0 {
             timer.invalidate()
             seconds = 30
-        }else{
+            let when = DispatchTime.now() + 5
+            DispatchQueue.main.asyncAfter(deadline: when) {
+                self.speak()
+            }
+        }else if seconds == 25 {
+            timer.invalidate()
+            isTimerRunning = false
+            let when = DispatchTime.now() + 6
+            DispatchQueue.main.asyncAfter(deadline: when) {
+                if !self.isTimerRunning{
+                    self.seconds -= 1
+                    self.currentTime.text = "\(self.seconds)"
+                    self.runTimer()
+                    self.recogLabel.text = "다시 시작"
+                }
+            }
+        }else if seconds == 26 {
+            seconds -= 1
+            currentTime.text = "\(seconds)"
+            recogLabel.text = "멈춰"
+            recogLabel.isHidden = false
+        }
+        else{
             seconds -= 1
             currentTime.text = "\(seconds)"
         }
@@ -64,12 +86,28 @@ class DetailViewController: UIViewController,UIWebViewDelegate{
     }
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
-        let when = DispatchTime.now() + 10
+        let when = DispatchTime.now() + 3
         DispatchQueue.main.asyncAfter(deadline: when) {
-            if !self.isTimerRunning{
+            if !self.isTimerRunning && self.id != "2c_oijA34Z8"{
                 self.runTimer()
             }
         }
     }
     
+    func speak(){
+        let synthesizer = AVSpeechSynthesizer()
+        
+        let utterance = AVSpeechUtterance(string: "운동을 끝내셨어요! 다음 운동인 \'힐링요가\' 바로 시작 하시겠어요? ")
+        utterance.voice = AVSpeechSynthesisVoice(language: "ko-KR")
+        utterance.rate = 0.5
+        
+        synthesizer.speak(utterance)
+    }
+    
+    @IBAction func onTouchNext(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        vc.id = "2c_oijA34Z8"
+        self.show(vc, sender: nil)
+    }
 }

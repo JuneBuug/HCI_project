@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import AVFoundation
 class PickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
     
 
@@ -24,6 +24,15 @@ class PickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
             time.append(i.description)
             timePicker.reloadAllComponents()
         }
+        
+        let synthesizer = AVSpeechSynthesizer()
+        
+        let utterance = AVSpeechUtterance(string: "어떤 주기로 운동하실 건가요?")
+        utterance.voice = AVSpeechSynthesisVoice(language: "ko-KR")
+        utterance.rate = 0.5
+        
+        synthesizer.speak(utterance)
+        
         // Do any additional setup after loading the view.
     }
 

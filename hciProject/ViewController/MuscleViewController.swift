@@ -1,5 +1,5 @@
 //
-//  SettingsFinalViewController.swift
+//  MuscleViewController.swift
 //  hciProject
 //
 //  Created by 준킴 on 2017. 12. 12..
@@ -8,14 +8,14 @@
 
 import UIKit
 import AVFoundation
-class SettingsFinalViewController: UIViewController {
 
-    
+class MuscleViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
         let synthesizer = AVSpeechSynthesizer()
         
-        let utterance = AVSpeechUtterance(string: "이제 모두 완료되었어요. 아래 버튼을 눌러 운동을 시작하세요.")
+        let utterance = AVSpeechUtterance(string: "어디를 운동하고 싶으세요? 주로 운동하고 싶은 부위를 모두 터치해주세요.")
         utterance.voice = AVSpeechSynthesisVoice(language: "ko-KR")
         utterance.rate = 0.5
         
@@ -24,10 +24,6 @@ class SettingsFinalViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func onEnd(_ sender: Any) {
-        Global.isRecommended = true
-        _ = navigationController?.popToRootViewController(animated: true)
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

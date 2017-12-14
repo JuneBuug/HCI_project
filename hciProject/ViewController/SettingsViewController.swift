@@ -10,6 +10,7 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var defaultLabel: UILabel!
     @IBOutlet weak var muscleLabel: UILabel!
     @IBOutlet weak var proficiencyLabel: UILabel!
     override func viewDidLoad() {
@@ -37,8 +38,9 @@ class SettingsViewController: UIViewController {
         if Global.isRecommended {
             muscleLabel.text = "승모근, 광배근"
             proficiencyLabel.text = "중급자"
-            
+            defaultLabel.isHidden = true
         }else{
+            defaultLabel.isHidden = false
             muscleLabel.text = "상복근"
             proficiencyLabel.text = "초보자"
         }

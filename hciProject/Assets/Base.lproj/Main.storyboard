@@ -45,7 +45,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="‘상복근’ 추천 루틴 Recommendation for ‘Upper Abs’" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHF-JB-Mhp">
-                                <rect key="frame" x="20" y="464" width="857" height="51"/>
+                                <rect key="frame" x="20" y="464" width="984" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -117,6 +117,8 @@
                         <outlet property="aiView" destination="3Ld-On-6wm" id="L5M-cB-jYW"/>
                         <outlet property="routineScrollView" destination="DKh-Dp-BX0" id="aag-mi-XrW"/>
                         <outlet property="scrollView" destination="xXO-sR-m3R" id="oJN-bP-96f"/>
+                        <outlet property="subTitle" destination="dHF-JB-Mhp" id="uCl-Rg-3L4"/>
+                        <outlet property="subTitle2" destination="ijl-y5-aDx" id="sjn-yf-mS5"/>
                         <outlet property="topTitle" destination="gdt-zN-zNr" id="mmC-bj-ADd"/>
                     </connections>
                 </viewController>
@@ -127,18 +129,50 @@
         <!--운동검색 Search Exercise-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="hciProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="SearchViewController" customModule="hciProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PUc-IC-9B4">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="683"/>
+                                <color key="backgroundColor" red="0.16074991229999999" green="0.16072323920000001" blue="0.16484043000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="0.77360922099999996" blue="0.021801328290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Fih-M5-j9S">
+                                        <rect key="frame" x="0.0" y="28" width="1024" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Fih-M5-j9S" id="jb7-P7-6dx">
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="TBH-vT-2nN">
+                                        <rect key="frame" x="0.0" y="72" width="1024" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TBH-vT-2nN" id="MYW-Gw-NJy">
+                                            <rect key="frame" x="0.0" y="0.0" width="991" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="0.16074991229999999" green="0.16072323920000001" blue="0.16484043000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PUc-IC-9B4" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" id="4qK-4A-pvf"/>
+                            <constraint firstItem="PUc-IC-9B4" firstAttribute="height" secondItem="O1u-W8-tvY" secondAttribute="height" id="YvV-Se-a4m"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="운동검색 Search Exercise" image="first" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="tableView" destination="PUc-IC-9B4" id="UaG-LW-vEX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="515"/>
+            <point key="canvasLocation" x="750" y="514.84375"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -237,6 +271,13 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="현재는 기본 설정입니다.  수정하기를 눌러 정보를 입력해주세요." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqR-iH-pgj">
+                                <rect key="frame" x="312" y="87" width="401" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.16074991229999999" green="0.16072323920000001" blue="0.16484043000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -254,18 +295,19 @@
                     <tabBarItem key="tabBarItem" title="설정 Settings" image="ic_settings" id="OGy-wE-b0V"/>
                     <navigationItem key="navigationItem" title="설정" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="TeY-yi-r4Z"/>
                     <connections>
+                        <outlet property="defaultLabel" destination="bqR-iH-pgj" id="Y2Z-gB-iEV"/>
                         <outlet property="muscleLabel" destination="1bC-De-zpG" id="c35-Bg-N0b"/>
                         <outlet property="proficiencyLabel" destination="p8x-Mo-7UM" id="Lkz-WD-TkU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ATf-2u-0q8" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="1340"/>
+            <point key="canvasLocation" x="750" y="1339.84375"/>
         </scene>
         <!--운동 추천-->
         <scene sceneID="smR-UT-aEq">
             <objects>
-                <viewController title="운동 추천" id="JcT-eo-Aha" sceneMemberID="viewController">
+                <viewController title="운동 추천" id="JcT-eo-Aha" customClass="RecommendationViewController" customModule="hciProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bIr-Oh-D9J">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -325,7 +367,7 @@
         <!--근육 선택-->
         <scene sceneID="xfn-ZX-bDQ">
             <objects>
-                <viewController title="근육 선택" id="KM0-P1-fOa" sceneMemberID="viewController">
+                <viewController title="근육 선택" id="KM0-P1-fOa" customClass="MuscleViewController" customModule="hciProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b5e-FZ-yW0">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -478,8 +520,9 @@
                                 <color key="textColor" red="0.96862745100000003" green="0.81568627449999997" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Select exercise cycle." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFs-nT-QDo">
-                                <rect key="frame" x="316" y="275" width="392" height="38.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select exercise cycle." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFs-nT-QDo">
+                                <rect key="frame" x="369" y="275" width="286.5" height="38.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -531,7 +574,6 @@
                         </subviews>
                         <color key="backgroundColor" red="0.16074991229999999" green="0.16072323920000001" blue="0.16484043000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="cPh-wd-w9T" firstAttribute="centerX" secondItem="WFs-nT-QDo" secondAttribute="centerX" id="NbQ-Xu-VBa"/>
                             <constraint firstItem="usR-sj-GTR" firstAttribute="bottom" secondItem="Tvl-CJ-MsV" secondAttribute="bottom" constant="48" id="Nxb-yP-FZM"/>
                             <constraint firstItem="cPh-wd-w9T" firstAttribute="centerX" secondItem="jBx-iP-ka4" secondAttribute="centerX" id="VfQ-4D-o7c"/>
                             <constraint firstItem="jBx-iP-ka4" firstAttribute="leading" secondItem="usR-sj-GTR" secondAttribute="leading" constant="239" id="VnE-NW-5IP"/>
@@ -540,7 +582,6 @@
                             <constraint firstItem="cPh-wd-w9T" firstAttribute="leading" secondItem="usR-sj-GTR" secondAttribute="leading" id="kBK-cC-PF9"/>
                             <constraint firstItem="jBx-iP-ka4" firstAttribute="top" secondItem="n3H-92-pu4" secondAttribute="top" constant="193" id="kK8-kN-ied"/>
                             <constraint firstItem="cPh-wd-w9T" firstAttribute="width" secondItem="n3H-92-pu4" secondAttribute="width" id="x1r-MS-mds"/>
-                            <constraint firstItem="WFs-nT-QDo" firstAttribute="leading" secondItem="usR-sj-GTR" secondAttribute="leading" constant="316" id="yVR-oX-DfU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="usR-sj-GTR"/>
                     </view>
@@ -701,8 +742,9 @@
                             <navigationBar contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" backIndicatorImage="ic_back" backIndicatorTransitionMaskImage="ic_back" translatesAutoresizingMaskIntoConstraints="NO" id="RFc-dR-fN3">
                                 <rect key="frame" x="0.0" y="3" width="1024" height="44"/>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Now tap the button below to start exercise :)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOT-aD-Gsw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Now tap the button below to start exercise :)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOT-aD-Gsw">
                                 <rect key="frame" x="131" y="416" width="763" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -777,7 +819,6 @@
                         </subviews>
                         <color key="backgroundColor" red="0.16074991229999999" green="0.16072323920000001" blue="0.16484043000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="RFc-dR-fN3" firstAttribute="centerX" secondItem="sOT-aD-Gsw" secondAttribute="centerX" id="3yC-tC-YIe"/>
                             <constraint firstItem="RFc-dR-fN3" firstAttribute="top" secondItem="8KA-nx-C3F" secondAttribute="topMargin" constant="-61" id="EQ3-qD-m3g"/>
                             <constraint firstItem="RFc-dR-fN3" firstAttribute="leading" secondItem="mun-wg-1qQ" secondAttribute="leading" id="Ef5-hV-ivY"/>
                             <constraint firstItem="RFc-dR-fN3" firstAttribute="width" secondItem="8KA-nx-C3F" secondAttribute="width" id="FDz-N7-tEc"/>
@@ -860,10 +901,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ripples" translatesAutoresizingMaskIntoConstraints="NO" id="Y6R-Hb-VwN">
-                                <rect key="frame" x="39" y="621" width="180" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="운동을 멈추고 싶으면 '멈춰' 라고 말해주세요." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7b-rd-f7k">
                                 <rect key="frame" x="20" y="670" width="219" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -871,6 +908,21 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="'멈춰'" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jt6-KR-xp1">
+                                <rect key="frame" x="73" y="629" width="113" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Arb-I2-MpQ">
+                                <rect key="frame" x="933" y="600" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="ic_next"/>
+                                <connections>
+                                    <action selector="onTouchNext:" destination="oZR-kA-dG6" eventType="touchUpInside" id="2VQ-b3-PYX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.16074991229999999" green="0.16072323920000001" blue="0.16484043000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -880,7 +932,7 @@
                     </view>
                     <connections>
                         <outlet property="currentTime" destination="KZj-sj-4Wz" id="72W-vA-IYm"/>
-                        <outlet property="ripplesImg" destination="Y6R-Hb-VwN" id="NyE-yd-vXu"/>
+                        <outlet property="recogLabel" destination="Jt6-KR-xp1" id="WL8-jP-QgA"/>
                         <outlet property="startRecogBtn" destination="yMt-W1-307" id="Ef0-N5-FrC"/>
                         <outlet property="startVoiceRecognition" destination="yMt-W1-307" id="OQy-b2-uCV"/>
                         <outlet property="webView" destination="51d-77-pbS" id="AU4-v2-hYE"/>
@@ -888,7 +940,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ARy-YE-RCD" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2594" y="-320"/>
+            <point key="canvasLocation" x="2593.9453125" y="-320.3125"/>
         </scene>
     </scenes>
     <resources>
@@ -907,6 +959,5 @@
         <image name="ic_next" width="240" height="240"/>
         <image name="ic_settings" width="36" height="35"/>
         <image name="img_muscle" width="1036" height="1536"/>
-        <image name="ripples" width="365" height="58"/>
     </resources>
 </document>
