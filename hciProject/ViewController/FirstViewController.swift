@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import AVFoundation
 
 class FirstViewController: UIViewController {
     
     var youtubeIDList = ["llwXGZlgdU0","XTH5saFBDqA"]
     var IDList = ["P8CDv4dgHEM","llwXGZlgdU0","XTH5saFBDqA","1KGU6iB5MVE","wc_PizWNp6k"]
     var list : [Video] = []
-   
+    
     @IBOutlet weak var subTitle: UILabel!
     @IBOutlet weak var subTitle2: UILabel!
     @IBOutlet weak var aiView: UIView!
@@ -35,6 +36,7 @@ class FirstViewController: UIViewController {
             subTitle2.text = "초보용 For Beginners"
         }
         
+        
         // Notification : Recommened가 설정됐을 때
         NotificationCenter.default.addObserver(self, selector: #selector(self.onRecommended), name: NSNotification.Name.init("recommendationKey"), object: nil)
         
@@ -50,6 +52,7 @@ class FirstViewController: UIViewController {
         
         aiView.layer.cornerRadius = 4.0
         aiView.clipsToBounds = true
+        speak(text: "안녕하세요, 오늘은 \'레베카 루이즈 11자 복근\' 운동 어떠신가요?")
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -72,6 +75,11 @@ class FirstViewController: UIViewController {
         self.show(vc, sender: nil)
     }
     
+    @IBAction func onTouchRndBtn(_ sender: Any) {
+        speak(text: "강도 높은 운동을 자주 하신 것 같아요. 오늘은 이런 운동, 어떠세요? \'힐링요가\', \'10분 스트레칭\'")
+        let when = DispatchTime.now() + 40
+    }
+
     @objc func onRecommended(){
         if Global.isRecommended {
             topTitle.text = "이어보기 Continue Watching"
@@ -146,6 +154,15 @@ class FirstViewController: UIViewController {
         }
     }
     
+    func speak(text: String){
+        let synthesizer = AVSpeechSynthesizer()
+        
+        let utterance = AVSpeechUtterance(string: text)
+        utterance.voice = AVSpeechSynthesisVoice(language: "ko-KR")
+        utterance.rate = 0.5
+        
+        synthesizer.speak(utterance)
+    }
    
 
 }

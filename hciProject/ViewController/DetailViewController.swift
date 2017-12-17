@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 class DetailViewController: UIViewController,UIWebViewDelegate{
-
+    
     @IBOutlet weak var recogLabel: UILabel!
     @IBOutlet var startRecogBtn: UIButton!
     @IBOutlet var currentTime: UILabel!
@@ -18,16 +18,23 @@ class DetailViewController: UIViewController,UIWebViewDelegate{
     var timer = Timer()
     var isTimerRunning = false
     var seconds : Int = 30
+    var synthesizer = AVSpeechSynthesizer()
+    var nowCanspeak = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         webView.delegate = self
         loadYoutube(webView: webView,videoID: id)
-       
+        NotificationCenter.default.addObserver(self, selector: #selector(setNowCanSpeak), name: NSNotification.Name.init("detailSpeakKey"), object: nil)
         // Do any additional setup after loading the view.
     }
-
+    
+    @objc func setNowCanSpeak(){
+        nowCanspeak = true
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
-         Global.adVar += 1
+        Global.adVar += 1
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -52,9 +59,10 @@ class DetailViewController: UIViewController,UIWebViewDelegate{
         if seconds == 0 {
             timer.invalidate()
             seconds = 30
-            let when = DispatchTime.now() + 5
+            let when = DispatchTime.now() + 3
             DispatchQueue.main.asyncAfter(deadline: when) {
                 self.speak()
+                
             }
         }else if seconds == 25 {
             timer.invalidate()
@@ -78,30 +86,29 @@ class DetailViewController: UIViewController,UIWebViewDelegate{
             seconds -= 1
             currentTime.text = "\(seconds)"
         }
-       
+        
     }
     func runTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: #selector(self.updateTimer), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1.1, target: self, selector: #selector(self.updateTimer), userInfo: nil, repeats: true)
         isTimerRunning = true
     }
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
         let when = DispatchTime.now() + 3
         DispatchQueue.main.asyncAfter(deadline: when) {
-            if !self.isTimerRunning && self.id != "2c_oijA34Z8"{
+            if !self.isTimerRunning && self.id == "50GX-0jydXM"{
+                self.seconds = 30
                 self.runTimer()
             }
         }
     }
     
     func speak(){
-        let synthesizer = AVSpeechSynthesizer()
-        
-        let utterance = AVSpeechUtterance(string: "운동을 끝내셨어요! 다음 운동인 \'힐링요가\' 바로 시작 하시겠어요? ")
+        let utterance = AVSpeechUtterance(string: "오늘 정해진 운동량을 끝내셨어요! 수고하셨습니다.")
         utterance.voice = AVSpeechSynthesisVoice(language: "ko-KR")
         utterance.rate = 0.5
         
-        synthesizer.speak(utterance)
+        self.synthesizer.speak(utterance)
     }
     
     @IBAction func onTouchNext(_ sender: Any) {
